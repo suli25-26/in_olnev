@@ -7,12 +7,13 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * JavaFX App
  */
 public class App extends Application {
-
+    public static ArrayList<NameDict> nameDictList;
     private static Scene scene;
 
     @Override
@@ -38,8 +39,8 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
-    public static void main(String[] args) {
-        // Storage.readContent();
+    public static void main(String[] args) {        
+        nameDictList = Storage.readContent();
         launch();
     }
 
